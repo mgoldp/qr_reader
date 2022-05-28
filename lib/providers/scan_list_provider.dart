@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_reader/providers/db_provider.dart';
+import 'package:sqflite/sqflite.dart';
 
 class ScanListProvider extends ChangeNotifier {
   List<ScanModel> scans = [];

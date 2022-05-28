@@ -1,9 +1,18 @@
+// To parse this JSON data, do
+//
+//     final scanModel = scanModelFromJson(jsonString);
+
 import 'dart:convert';
+import 'package:meta/meta.dart';
+
+ScanModel scanModelFromJson(String str) => ScanModel.fromJson(json.decode(str));
+
+String scanModelToJson(ScanModel data) => json.encode(data.toJson());
 
 class ScanModel {
   ScanModel({
-    this.id = 0,
-    this.tipo = 'http',
+    this.id,
+    this.tipo,
     required this.valor,
   }) {
     if (valor.contains('http')) {
@@ -13,8 +22,8 @@ class ScanModel {
     }
   }
 
-  int id;
-  String tipo;
+  int? id;
+  String? tipo;
   String valor;
 
   factory ScanModel.fromJson(Map<String, dynamic> json) => ScanModel(
