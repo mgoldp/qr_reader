@@ -7,7 +7,9 @@ class ScanListProvider extends ChangeNotifier {
   String tipoSeleccionado = 'http';
 
   nuevoScan(String valor) async {
-    final nuevoScan = ScanModel(valor: valor);
+    final nuevoScan = ScanModel(
+      valor: valor,
+    );
     final id = await DBProvider.db.nuevoScan(nuevoScan);
 
     // asignar el ID de la base de datos al modelo
