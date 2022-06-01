@@ -48,7 +48,7 @@ class _HomePageBody extends StatelessWidget {
 
     //TODO: Temporal, leer base de datos
     //final tempScan = ScanModel(valor: 'http://google.com');
-    DBProvider.db.deleteAllScansRaw().then(print);
+    //DBProvider.db.deleteAllScansRaw().then(print);
 
     // Usar el ScanList Provider
     final scanListProvider =
