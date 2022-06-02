@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/scan_list_provider.dart';
+import '../utils/utils.dart';
 
 class ScanTiles extends StatelessWidget {
   const ScanTiles({
@@ -39,7 +40,7 @@ class ScanTiles extends StatelessWidget {
             Icons.keyboard_arrow_right,
             color: Colors.grey,
           ),
-          onTap: () => print('Abrir Algo'),
+          onTap: () => launchUrlUtil(context, scans[i]),
         ),
       ),
     );
